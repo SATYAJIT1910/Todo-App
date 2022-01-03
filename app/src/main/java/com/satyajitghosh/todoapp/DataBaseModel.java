@@ -3,12 +3,10 @@ package com.satyajitghosh.todoapp;
 public class DataBaseModel {
     String title;
     String imp;
-    String done;
 
-    public DataBaseModel(String title, String imp, String done) {
+    public DataBaseModel(String title,String imp) {
         this.title = title;
         this.imp = imp;
-        this.done = done;
     }
 
     public String getTitle() {
@@ -27,11 +25,4 @@ public class DataBaseModel {
         this.imp = imp;
     }
 
-    public String getDone() {
-        return done;
-    }
-
-    public void setDone(String done) {
-        this.done = done;
-    }
 }

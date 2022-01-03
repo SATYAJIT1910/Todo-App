@@ -16,7 +16,6 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String TABLE_NAME ="TodoTable" ;
     private static final String ID_COL ="ID";
     private static final String TITLE_COL = "TITLE";
-    private static final String DONE_COL ="DONE" ;
     private static final String IMP_COL = "IMP";
 
     public DBHandler(@Nullable Context context) {
@@ -25,15 +24,14 @@ public class DBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String query="CREATE TABLE "+TABLE_NAME+"("+ID_COL+" INTEGER PRIMARY KEY AUTOINCREMENT,"+TITLE_COL+" TEXT,"+DONE_COL+" BOOLEAN,"+IMP_COL+" BOOLEAN)";
+        String query="CREATE TABLE "+TABLE_NAME+"("+ID_COL+" INTEGER PRIMARY KEY AUTOINCREMENT,"+TITLE_COL+" TEXT,"+ IMP_COL+" TEXT)";
         sqLiteDatabase.execSQL(query);
     }
-    public void addItems(String title,Boolean imp){
+    public void addItems(String title,String imp){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues values=new ContentValues();
         values.put(TITLE_COL,title);
         values.put(IMP_COL,imp);
-        values.put(DONE_COL,false);
         db.insert(TABLE_NAME,null,values);
         db.close();
     }
@@ -45,8 +43,7 @@ public class DBHandler extends SQLiteOpenHelper {
             do {
                 arr.add(new DataBaseModel(
                         cursorItems.getString(1),
-                        cursorItems.getString(2),
-                        cursorItems.getString(3)
+                        cursorItems.getString(2)
                 ));
             } while (cursorItems.moveToNext());
 
