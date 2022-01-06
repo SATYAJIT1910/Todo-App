@@ -10,8 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TodoApp"
-        >
+        android:theme="@style/Theme.TodoApp">
+        <activity
+            android:name=".TodoEntryActivity"
+            android:exported="false" />
         <activity
             android:name=".ViewTodoList"
             android:exported="false" />

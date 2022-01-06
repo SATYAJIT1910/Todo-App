@@ -26,7 +26,7 @@ public class ViewTodoList extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(ViewTodoList.this,MainActivity.class);
+                Intent intent=new Intent(ViewTodoList.this,TodoEntryActivity.class);
                 startActivity(intent);
             }
         });
