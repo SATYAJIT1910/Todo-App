@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -35,6 +37,18 @@ public class DBHandler extends SQLiteOpenHelper {
         db.insert(TABLE_NAME,null,values);
         db.close();
     }
+    public void deleteItems(String titleforDel) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_NAME, "TITLE=?", new String[]{titleforDel});
+        db.close();
+    }
+
+
+
+
+
+
+
     public ArrayList<DataBaseModel> getItems(){
         ArrayList<DataBaseModel> arr=new ArrayList<>();
         SQLiteDatabase db=this.getReadableDatabase();
