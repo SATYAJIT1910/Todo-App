@@ -32,8 +32,8 @@ public class CustomAdapter extends ArrayAdapter<DataBaseModel> {
         TextView textView1 = currentItemView.findViewById(R.id.titleView);
         textView1.setText(arrayList.get(position).getTitle());
 
-        TextView textView2 = currentItemView.findViewById(R.id.impView);
-        textView2.setText(arrayList.get(position).getImp());
+       // TextView textView2 = currentItemView.findViewById(R.id.impView);
+       // textView2.setText(arrayList.get(position).getImp());
 
         Button button=currentItemView.findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
