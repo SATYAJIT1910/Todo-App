@@ -48,8 +48,8 @@ public class CustomAdapter extends ArrayAdapter<DataBaseModel> {
             public void onClick(View view) {
                 dbHandler = new DBHandler(getContext());
                 dbHandler.deleteItems(arrayList.get(position).getTitle());
-              // arrayList.remove(position);
-                textView1.setPaintFlags(textView1.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+               arrayList.remove(position);
+             //   textView1.setPaintFlags(textView1.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                 notifyDataSetChanged();
             }
         });
