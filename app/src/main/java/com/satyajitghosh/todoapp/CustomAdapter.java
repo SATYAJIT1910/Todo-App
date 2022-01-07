@@ -39,7 +39,9 @@ public class CustomAdapter extends ArrayAdapter<DataBaseModel> {
         int value=Integer.parseInt(arrayList.get(position).getImp());
         if(value==1){
             currentItemView.setBackgroundResource(R.drawable.rounded_corner_important);
-       }
+       }else{
+            currentItemView.setBackgroundResource(R.drawable.rounded_corner);
+        }
         Log.d("ImportantStatus",arrayList.get(position).getImp());
 
         Button button=currentItemView.findViewById(R.id.button2);
