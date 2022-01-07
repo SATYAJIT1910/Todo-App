@@ -8,12 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Switch;
 import android.widget.Toast;
 
 public class TodoEntryActivity extends AppCompatActivity {
     private EditText title;
     private Button button;
-    private RadioButton impYes;
+    private Switch impYes;
     private DBHandler dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

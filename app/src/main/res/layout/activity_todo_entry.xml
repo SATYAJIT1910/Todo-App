@@ -7,61 +7,56 @@
     android:background="@drawable/wallpaperflare_cropped"
     tools:context=".TodoEntryActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="47dp">
+    <EditText
+        android:id="@+id/title"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="What you want to do !?"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/impYes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/title"
-            style="@style/Widget.AppCompat.EditText"
-            android:layout_width="299dp"
-            android:layout_height="86dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="47dp"
-            android:ems="10"
-            android:hint="What you want to do !?"
-            android:inputType="textPersonName"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp" />
+    <Button
+        android:id="@+id/button"
 
-        <RadioButton
-            android:id="@+id/impYes"
-            android:layout_width="295dp"
-            android:layout_height="70dp"
-            android:layout_below="@+id/title"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="36dp"
-            android:layout_marginBottom="610dp"
-            android:text="Mark as Important"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="56dp"
+        android:backgroundTint="@color/customColor2"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/impYes"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-        <Button
-            android:id="@+id/button"
-
-            android:layout_width="wrap_content"
-            android:layout_height="75dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="316dp"
-            android:layout_marginEnd="134dp"
-            android:layout_marginBottom="455dp"
-            android:backgroundTint="@color/customColor2"
-            android:text="Submit" />
-
-    </RelativeLayout>
+    <Switch
+        android:id="@+id/impYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="592dp"
+        android:text="Important"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
